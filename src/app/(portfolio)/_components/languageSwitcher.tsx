@@ -18,7 +18,7 @@ export function LanguageSwitcher() {
   return (
     <div className="absolute top-6 right-6">
       <Select value={currentLocale} onValueChange={handleChange}>
-        <SelectTrigger className="w-[160px] bg-white/10 border border-white/20 text-white backdrop-blur-md rounded-xl hover:bg-white/20 transition">
+        <SelectTrigger className="w-40 bg-white/10 border border-white/20 text-white backdrop-blur-md rounded-xl hover:bg-white/20 transition">
           <SelectValue />
         </SelectTrigger>
 
