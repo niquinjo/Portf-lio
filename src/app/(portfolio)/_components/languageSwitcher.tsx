@@ -10,16 +10,15 @@ export function LanguageSwitcher() {
   const currentLocale = pathname.split("/")[1];
 
   const handleChange = (value: string) => {
-    const segments = pathname.split("/");
-    segments[1] = value;
-    router.push(segments.join("/"));
+    const pathWithoutLocale = pathname.replace(/^\/(pt|en|es)/, "");
+    router.push(`/${value}${pathWithoutLocale}`);
   };
+
 
   return (
     <div className="absolute top-6 right-6">
       <Select value={currentLocale} onValueChange={handleChange}>
-        <SelectTrigger className="w-[160px]git add .
- bg-white/10 border border-white/20 text-white backdrop-blur-md rounded-xl hover:bg-white/20 transition">
+        <SelectTrigger className="w-[160px] bg-white/10 border border-white/20 text-white backdrop-blur-md rounded-xl hover:bg-white/20 transition">
           <SelectValue />
         </SelectTrigger>
 
