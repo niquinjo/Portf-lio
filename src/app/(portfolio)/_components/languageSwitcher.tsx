@@ -13,20 +13,20 @@ export function LanguageSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const segments = pathname.split("/");
-  const currentLocale = segments[1] || "pt";
+  const currentLocale = pathname.split("/").filter(Boolean)[0] || "pt";
 
   const handleChange = (value: string) => {
-    const newSegments = [...segments];
+    const segments = pathname.split("/").filter(Boolean);
 
-    // garante que estamos substituindo o locale
-    if (["pt", "en", "es"].includes(newSegments[1])) {
-      newSegments[1] = value;
+    // Se o primeiro segmento é um locale, substitui
+    if (["pt", "en", "es"].includes(segments[0])) {
+      segments[0] = value;
     } else {
-      newSegments.splice(1, 0, value);
+      // Se não houver locale, adiciona no início
+      segments.unshift(value);
     }
 
-    const newPath = newSegments.join("/") || `/${value}`;
+    const newPath = `/${segments.join("/")}`;
     router.push(newPath);
   };
 
