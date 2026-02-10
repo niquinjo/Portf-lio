@@ -1,0 +1,22 @@
+{
+  "Home": {
+    "role": "Full Stack Developer",
+    "description": "I build modern web applications focused on performance, design and great user experience.",
+    "technologies": "My Technologies",
+    "projectsButton": "View Projects",
+    "dialogTitle": "Projects",
+    "dialogDescription": "Some projects that are part of my journey as a developer.",
+    "projects": {
+      "pizzariaTitle": "Pizzeria Project (Front-end + API)",
+      "pizzariaDescription": "Complete pizzeria application with React/Next.js front-end integrated to a custom API. Simulates a real ordering system applying REST concepts and best practices.",
+      "doceTitle": "Doce Fatias (Real Project)",
+      "doceDescription": "Real project developed from scratch for a bakery, focused on branding, usability and online presence. Private repository because it’s a real client.",
+      "linksTitle": "Links Tree",
+      "linksDescription": "Linktree-inspired page to centralize social links and projects with clean and responsive design.",
+      "imcTitle": "BMI Calculator",
+      "imcDescription": "Simple BMI calculator focused on logic, validation and user interaction.",
+      "cartTitle": "Shopping Cart",
+      "cartDescription": "Shopping cart application simulating e-commerce flow with item control and reusable components."
+    }
+  }
+}

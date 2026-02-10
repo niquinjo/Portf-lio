@@ -1,0 +1,22 @@
+{
+  "Home": {
+    "role": "Desarrollador Full Stack",
+    "description": "Creo aplicaciones web modernas, enfocadas en rendimiento, diseño y una excelente experiencia de usuario.",
+    "technologies": "Mis Tecnologías",
+    "projectsButton": "Ver Proyectos",
+    "dialogTitle": "Proyectos",
+    "dialogDescription": "Algunos proyectos que forman parte de mi trayectoria como desarrollador.",
+    "projects": {
+      "pizzariaTitle": "Proyecto Pizzería (Front-end + API)",
+      "pizzariaDescription": "Aplicación completa de pizzería con front-end en React/Next.js integrado a una API propia, simulando un sistema real de pedidos.",
+      "doceTitle": "Doce Fatias (Proyecto Real)",
+      "doceDescription": "Proyecto real desarrollado desde cero para una pastelería, enfocado en identidad visual, usabilidad y presencia online.",
+      "linksTitle": "Links Tree",
+      "linksDescription": "Página inspirada en Linktree para centralizar redes sociales y proyectos con un diseño limpio y responsivo.",
+      "imcTitle": "Calculadora de IMC",
+      "imcDescription": "Aplicación simple para el cálculo de IMC con enfoque en lógica, validación e interacción con el usuario.",
+      "cartTitle": "Carrito de Compras",
+      "cartDescription": "Aplicación que simula el flujo de un e-commerce con control de productos y organización de componentes."
+    }
+  }
+}
