@@ -1,19 +1,34 @@
 "use client";
 
 import { useRouter, usePathname } from "next/navigation";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
+} from "@/components/ui/select";
 
 export function LanguageSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const currentLocale = pathname.split("/")[1];
+  const segments = pathname.split("/");
+  const currentLocale = segments[1] || "pt";
 
   const handleChange = (value: string) => {
-    const pathWithoutLocale = pathname.replace(/^\/(pt|en|es)/, "");
-    router.push(`/${value}${pathWithoutLocale}`);
-  };
+    const newSegments = [...segments];
 
+    // garante que estamos substituindo o locale
+    if (["pt", "en", "es"].includes(newSegments[1])) {
+      newSegments[1] = value;
+    } else {
+      newSegments.splice(1, 0, value);
+    }
+
+    const newPath = newSegments.join("/") || `/${value}`;
+    router.push(newPath);
+  };
 
   return (
     <div className="absolute top-6 right-6">
