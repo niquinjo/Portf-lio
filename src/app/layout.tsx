@@ -16,6 +16,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Portfólio - Nícolas Pereira",
   description: "Portfólio pessoal de Nícolas Pereira, desenvolvedor Full Stack. Confira meus projetos, habilidades e experiências profissionais.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
